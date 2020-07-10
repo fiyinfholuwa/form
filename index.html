@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" id="i" class="toggle-btn" onclick="Login()">Log In</button>
+				<button type="button" id="k" class="toggle-btn" onclick="Register()" >Register</button>
+			</div>
+			<div class="social-icon">
+			<img src="em.jpg">
+			<img src="fb.png">
+			<img src="tw.png">
+			<form  id="Login" class="input-group" method="post" action="contact-form.php">
+				<input type="text"  name="Username" class="input-field" placeholder="User Id" required>
+				<input type="password" name="password" class="input-field" placeholder="Enter password" required>
+				<input type="checkbox" class="checkbox-field"><span>Remember password</span>
+				<button type="submit" class="submit-btn">Login</button>
+
+			</form>
+			<form id="Register" class="input-group" method="post" action="contact-form.php">
+				<input type="text" name="Username" class="input-field" placeholder="User Id" required>
+				<input type="email" name="Email" class="input-field" placeholder="Email Id" required>
+				<input type="password" name="password" class="input-field" placeholder="Enter password" required>
+				<input type="checkbox" class="checkbox-field"><span>I agree to the terms & conditions</span>
+				<button type="submit" class="submit-btn">Register</button>
+			</form>
+		</div>
+		</div>
+		
+	</div>
+<script>
+	var x = document.getElementById("Login");
+	var y = document.getElementById("Register");
+	var z = document.getElementById("btn");
+
+	function Register() {
+		x.style.left = "-400px";
+		y.style.left = "50px";
+		z.style.left = "110px";
+	}
+
+	function Login() {
+		x.style.left = "50px";
+		y.style.left = "450px";
+		z.style.left = "0px";
+	}
+</script>
+</body>
+</html>
